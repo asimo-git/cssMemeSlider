@@ -1,0 +1,26 @@
+
+
+.container {
+    background-color: rgb(26, 25, 25);
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+img {
+    display: none;
+}
+
+.description {
+    display: none;
+}
+
+#button_1:checked ~ .img1,
+#button_2:checked ~ .img2,
+#button_3:checked ~ .img3,
+#button_4:checked ~ .img4,
+#button_5:checked ~ .img5 {
+    display: block;
+}
+
