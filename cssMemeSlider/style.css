@@ -3,24 +3,75 @@
 .container {
     background-color: rgb(26, 25, 25);
     width: 90%;
-    height: 80vh;
+    height: 100vh;
     margin: 0 auto;
     color: aliceblue;
 }
 
-img {
-    display: none;
+.slider__itsself{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 70vh;
+    height: 70vh;
+    border-radius: 3%;
 }
 
+.inner__part,
+.text__container {
+    display: flex;
+    height: 100%;
+    width: 500%;
+    transition: all 2s ease;
+}
+
+.inner__part > div,
 .description {
-    display: none;
+    height: 100%;
+    width: 20%;
 }
 
-#button_1:checked ~ .img1,
-#button_2:checked ~ .img2,
-#button_3:checked ~ .img3,
-#button_4:checked ~ .img4,
-#button_5:checked ~ .img5 {
-    display: block;
+img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+#button_1:checked ~ .slider__itsself .inner__part {
+    margin-left:0; 
+}
+#button_2:checked ~ .slider__itsself .inner__part {
+    margin-left:-100%;
+}
+#button_3:checked ~ .slider__itsself .inner__part {
+    margin-left:-200%;
+}
+#button_4:checked ~ .slider__itsself .inner__part {
+    margin-left:-300%;
+}
+#button_5:checked ~ .slider__itsself .inner__part {
+    margin-left:-400%;
+}
+
+.text__slider {
+    height: 10%;
+    width: 30%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#button_1:checked ~ .text__slider .text__container {
+    margin-left:0; 
+}
+#button_2:checked ~ .text__slider .text__container {
+    margin-left:-100%; 
+}
+#button_3:checked ~ .text__slider .text__container {
+    margin-left:-200%;
+}
+#button_4:checked ~ .text__slider .text__container {
+    margin-left:-300%; 
+}
+#button_5:checked ~ .text__slider .text__container {
+    margin-left:-400%;
 }
 
