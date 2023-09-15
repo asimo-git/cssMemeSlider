@@ -1,7 +1,7 @@
+
 .container {
   background-color: rgb(26, 25, 25);
   width: 90%;
-  height: 100vh;
   margin: 0 auto;
   color: aliceblue;
   padding: 2vh;
@@ -14,8 +14,8 @@ input {
 .slider__itsself {
   overflow: hidden;
   margin: 0 auto 3vh;
-  height: 85vh;
   border-radius: 3%;
+  max-width: 80vh;
 }
 
 .inner__part,
@@ -79,9 +79,9 @@ img {
 
 .footer {
   margin: 0 auto;
-  max-width: 85vh;
   display: flex;
   justify-content: space-between;
+  max-width: 80vh;
 }
 
 .label__container {
@@ -113,4 +113,17 @@ label:active {
 #button_4:checked ~ .footer .label__container label:nth-child(4),
 #button_5:checked ~ .footer .label__container label:nth-child(5) {
   border: 1vh solid forestgreen;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+.footer {
+    flex-direction: column-reverse;
+    gap: 5vh;
+    align-items: center;
+}
+
+.text__slider {
+    width: 100%;
+}
 }
