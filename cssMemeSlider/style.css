@@ -1,0 +1,129 @@
+
+.container {
+  background-color: rgb(26, 25, 25);
+  width: 90%;
+  margin: 0 auto;
+  color: aliceblue;
+  padding: 2vh;
+}
+
+input {
+  display: none;
+}
+
+.slider__itsself {
+  overflow: hidden;
+  margin: 0 auto 3vh;
+  border-radius: 3%;
+  max-width: 80vh;
+}
+
+.inner__part,
+.text__container {
+  display: flex;
+  height: 100%;
+  width: 500%;
+  transition: all 2s ease;
+}
+
+.inner__part > div,
+.description {
+  height: 100%;
+  width: 20%;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#button_1:checked ~ .slider__itsself .inner__part {
+  margin-left: 0;
+}
+#button_2:checked ~ .slider__itsself .inner__part {
+  margin-left: -100%;
+}
+#button_3:checked ~ .slider__itsself .inner__part {
+  margin-left: -200%;
+}
+#button_4:checked ~ .slider__itsself .inner__part {
+  margin-left: -300%;
+}
+#button_5:checked ~ .slider__itsself .inner__part {
+  margin-left: -400%;
+}
+
+.text__slider {
+  height: 10%;
+  width: 60%;
+  overflow: hidden;
+  font-size: 4vh;
+}
+
+#button_1:checked ~ .footer .text__slider .text__container {
+  margin-left: 0;
+}
+#button_2:checked ~ .footer .text__slider .text__container {
+  margin-left: -100%;
+}
+#button_3:checked ~ .footer .text__slider .text__container {
+  margin-left: -200%;
+}
+#button_4:checked ~ .footer .text__slider .text__container {
+  margin-left: -300%;
+}
+#button_5:checked ~ .footer .text__slider .text__container {
+  margin-left: -400%;
+}
+
+.footer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 80vh;
+}
+
+.label__container {
+  display: flex;
+}
+
+label {
+  display: block;
+  width: 2vh;
+  height: 2vh;
+  background-color: aliceblue;
+  border-radius: 50%;
+  margin-left: 1vh;
+  cursor: pointer;
+  border: 1vh solid rgb(26, 25, 25);
+}
+
+label:hover {
+  background-color: forestgreen;
+}
+
+label:active {
+  background-color: rgb(18, 67, 18);
+}
+
+#button_1:checked ~ .footer .label__container label:nth-child(1),
+#button_2:checked ~ .footer .label__container label:nth-child(2),
+#button_3:checked ~ .footer .label__container label:nth-child(3),
+#button_4:checked ~ .footer .label__container label:nth-child(4),
+#button_5:checked ~ .footer .label__container label:nth-child(5) {
+  border: 1vh solid forestgreen;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+.footer {
+    flex-direction: column-reverse;
+    gap: 5vh;
+    align-items: center;
+}
+
+.text__slider {
+    width: 100%;
+}
+}
